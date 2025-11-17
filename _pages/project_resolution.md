@@ -1,4 +1,6 @@
 ## Resolution Analysis Framework for Modern Reconstruction Algorithms
+Modern methods for image reconstruction are becoming increasingly nonlinear, black-box, and at risk of “hallucination”. These trends mean that traditional tools for judging confidence in an image (visual quality assessment, point-spread functions, etc.) are less helpful than before. In this project, I developed a computational framework that allows users to easily inspect how accurately important image features (e.g., abnormalities) are reconstructed by any reconstruction method.
+
 **References:**  
 **C.-C. Chan**, J. P. Haldar, "Local perturbation responses and
     checkerboard test: A tool for characterizing advanced nonlinear
@@ -12,7 +14,7 @@
     reference-based image quality assessment in medical image
     reconstruction: Potential pitfalls and possible solutions", in
     *Proc. Asilomar*, 2023, pp. 36--39. (Invited paper).
-<!--     \[[Link](https://ieeexplore.ieee.org/document/10476746)\]   -->
+    \[[Link](https://ieeexplore.ieee.org/document/10476746)\]
 <!-- **C.-C. Chan**, J. P. Haldar, "Local perturbation responses: A tool -->
 <!--     for understanding the characteristics of advanced nonlinear MR -->
 <!--     reconstruction algorithms", in *Proc. Int. Soc. Magn. Reson. Med.*, -->
