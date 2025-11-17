@@ -8,7 +8,7 @@ nav_order: 2
 
 My articles can also be found on [Google Scholar](https://scholar.google.com/citations?user=NYOxZ6EAAAAJ&hl=en).
 
-**Pre-print/Under Review**
+**Preprint/Under Review**
 
 1.  **C.-C. Chan**, J. P. Haldar, "Constrained MRI using weighted
     Hilbert spaces: Fast scan-specific reconstruction with transparent
