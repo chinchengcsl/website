@@ -8,14 +8,18 @@ services:
     # and fill the args values with the output of the commands on the right
     # build:
     #   args:
-    #     GROUPID: # id -g
-    #     GROUPNAME: # id -gn
-    #     USERID: # id -u
-    #     USERNAME: # echo $USER
+    #     GROUPID: 1000
+    #     GROUPNAME: ccchan
+    #     USERID: 1000
+    #     USERNAME: ccchan
     ports:
-      - 8080:8080
+      - 8082:8080
       - 35729:35729
     volumes:
       - .:/srv/jekyll
+      - gem_cache:/usr/local/bundle/
     environment:
       - JEKYLL_ENV=development
+    command:  sh -c "bundle install && bundle exec jekyll serve --watch --livereload --livereload-port 35729 --force_polling --host 0.0.0.0 --port 8080"
+volumes:
+  gem_cache:
