@@ -2,7 +2,6 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ph.D. Candidate in Electrical and Computer Engineering  at University of Southern California.
 
 profile:
   align: right
@@ -38,8 +37,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-My research applies signal processing theory and mathematics to develop rigorous, high-quality, efficient, and  trustworthy image reconstruction algorithms for ill-posed inverse problems in computational imaging. Representative  works of mine include a novel, computationally efficient image representation that addresses a long-standing computational  challenge in non-Cartesian Fourier imaging, as well as a novel framework for designing reconstruction methods that balance  quality, efficiency, and transparency. Many of the algorithms I developed have a broad impact on both classical and modern machine-learning reconstruction methods and are applicable across multiple imaging modalities. 
+I am a Ph.D. Candidate in Electrical and Computer Engineering at the University of Southern California under the supervision of  Prof. Justin Haldar. My Ph.D. research focuses on developing high-quality, efficient, and trustworthy image reconstruction algorithms for ill-posed inverse problems in computational imaging. Representative works of mine include a novel image representation that addresses a long-standing computational challenge in non-Cartesian Fourier imaging, as well as a novel framework for designing reconstruction methods that balance quality, efficiency, and transparency.
 
-Before USC, I conducted research at National Taiwan University, where I developed some of the earliest machine learning–based autofocus algorithms, leveraging statistical learning, reinforcement learning, and deep neural networks. I also designed algorithms for analyzing optical coherence tomography (OCT) images, using methods like robust PCA and deep CNNs.
+Prior to Ph.D., I conducted research at National Taiwan University, where I developed machine learning-based autofocus algorithms and image-analysis algorithms for optical coherence tomography (OCT) images using deep learning.
+
 
 

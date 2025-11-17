@@ -1,7 +1,8 @@
 ## A Novel Hilbert-Space Reconstruction Framework for Computational Imaging
-I used Hilbert space theory to develop a framework for designing reconstruction techniques that offers quality, efficiency, and transparency. In this achieved by formulating reconstruction in a weighted Hilbert space and designing weighted-norms that encode image priors derived from the measured data. This formulation allows us to use reproducing kernel Hilbert space theory to design algorithms to performs advanced constrained/regularized reconstruction using efficient shift-invariant filtering instead of relying on iterative solvers, significantly improving the reconstruction speed. It also allows one to directly inspect the image priors derived from the data, offering transparency to the reconstruction process. While originally developed for magnetic resonance (MR) image reconstruction, the generality of this formulation allows it to adapted to other imaging modalities.
+The modern image reconstruction landscape contains various approaches that achieve different compromises between image quality, speed, and transparency (e.g., deep learning methods are powerful but often black-box; classical methods are transparent but slow). In this project, I addressed the trilemma between quality, speed, and transparency by developing a novel framework for imposing image priors in reconstruction using reproducing kernel Hilbert space theory. This formulation enables fast and high-quality regularized reconstruction using single-pass convolutions rather than iterative solvers. It also provides transparency to the reconstruction methods by allowing one to directly inspect the image priors derived from the data.
 
-**References**  
+
+**References:**  
 **C.-C. Chan**, J. P. Haldar, "Constrained MRI using weighted
     Hilbert spaces: Fast scan-specific reconstruction with transparent
     assumptions", 2025. (Conference abstract under review). \[[Link](../assets/pdf/paper_weighted_hilbert_space.pdf)\]
