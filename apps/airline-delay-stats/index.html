@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flight delay stats</title>
+  <meta name="description" content="Compare airline delays and cancellations for a route, from BTS on-time data.">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+<main>
+  <h1>Flight delay stats</h1>
+  <p class="lead">Compare how airlines perform on a route: delay distribution, median delay and cancellation rate,
+    from U.S. DOT (BTS) on-time performance data. <span id="data-range"></span></p>
+
+  <form id="query" autocomplete="off">
+    <div class="field wide">
+      <span class="label">Airlines</span>
+      <div id="airlines" class="pills"></div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="origin-input">Origin airport(s)</label>
+      <div class="chips" id="origin"><input id="origin-input" list="airport-list" placeholder="e.g. SAN" spellcheck="false"></div>
+      <small class="hint"></small>
+    </div>
+    <div class="field">
+      <label class="label" for="destination-input">Destination airport(s)</label>
+      <div class="chips" id="destination"><input id="destination-input" list="airport-list" placeholder="e.g. SJC" spellcheck="false"></div>
+      <small class="hint"></small>
+    </div>
+    <datalist id="airport-list"></datalist>
+    <p class="note wide">Give an origin, a destination, or both.</p>
+
+    <div class="field">
+      <label class="label" for="start">From month</label>
+      <select id="start"></select>
+    </div>
+    <div class="field">
+      <label class="label" for="end">To month (inclusive)</label>
+      <select id="end"></select>
+    </div>
+
+    <div class="field">
+      <label class="label" for="day">Day of week</label>
+      <select id="day"></select>
+    </div>
+    <div class="field">
+      <span class="label">Scheduled departure time</span>
+      <div class="inline">
+        <input type="time" id="time-start" aria-label="Earliest scheduled departure">
+        <span>to</span>
+        <input type="time" id="time-end" aria-label="Latest scheduled departure (exclusive; 00:00 = midnight)">
+        <label class="check"><input type="checkbox" id="any-time"> Any time</label>
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label" for="delay">Delay measured at</label>
+      <select id="delay">
+        <option value="">Automatic (departure, or arrival if only a destination)</option>
+        <option value="departure">Departure</option>
+        <option value="arrival">Arrival</option>
+      </select>
+    </div>
+    <div class="field">
+      <label class="label" for="max-delay">Maximum delay shown (minutes, optional)</label>
+      <input type="number" id="max-delay" min="1" step="1" placeholder="e.g. 120">
+      <small class="hint">Longer delays are drawn at the limit and labelled “N+”.</small>
+    </div>
+
+    <div class="actions wide">
+      <button type="submit">Show stats</button>
+      <span id="status" role="status" aria-live="polite"></span>
+    </div>
+  </form>
+
+  <section aria-label="Results">
+    <div id="chart"></div>
+    <div id="table"></div>
+  </section>
+</main>
+</body>
+</html>
